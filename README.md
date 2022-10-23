@@ -1,2 +1,2 @@
 # netology-react-composition2
-Decomposition
+Decomposition (yandex page mock).

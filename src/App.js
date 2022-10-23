@@ -1,5 +1,5 @@
 import MainPage from "./MainPage";
-import {fetchData} from "./FetchData";
+import {fetchData} from "./Functions/FetchData";
 
 function App() {
   const data=fetchData();

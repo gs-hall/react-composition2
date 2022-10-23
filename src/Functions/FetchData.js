@@ -1,4 +1,4 @@
-export default function fetchData() {
+export function fetchData() {
   return ({
     "news":{
       "sections":[{

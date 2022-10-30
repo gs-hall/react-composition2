@@ -1,0 +1,129 @@
+.page {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: row;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 5px;
+}
+
+.logo {
+  align-self: center;
+  margin-left: 5vw;
+}
+
+.info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+}
+
+.actual {
+  width: 100%;
+}
+
+.news {
+  display: flex;
+  flex-direction: column;
+}
+
+.assets ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.ads {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+}
+
+li i {
+  width: 15px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+li i.big {
+  width: 25px;
+}
+
+li a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.footer {
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.search-bar input {
+  width: 80%;
+}
+
+.heading {
+  display: flex;
+  flex-direction: row;  
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-right: 5px;
+  color: rgb(122, 161, 216);
+  cursor: pointer;
+}
+
+.heading h2 {
+  margin-right: 5px;
+  align-self: baseline;
+}
+
+.heading i {
+  margin-right: 5px;
+  align-self: baseline;
+}
+
+.heading .active {
+  color: rgb(39, 87, 174);
+}
+
+.heading .button {
+  background-color: rgb(119, 168, 245);
+  color: white;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-weight: lighter;
+  font-size: medium;
+}
+
+li span {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+li span.title {
+  font-weight: bold;
+}
+
+li span.description {
+  color: gray;
+}
+
+i.big {
+  font-size: x-large;
+}
+
+span.big {
+  font-size: x-large;
+}

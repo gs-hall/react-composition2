@@ -1,94 +1,191 @@
 export function fetchData() {
   return ({
     "news":{
-      "sections":[{
+      "headings":[
+        {
           "name":"Сейчас в СМИ",
-          "isActive":true
-      },        {
-        "name":"в Германии",
-        "isActive":false
-      },
-      {
-        "name":"Рекомендуем",
-        "isActive":false
-      }],
-
+          "id": 1
+        },
+        {
+          "name":"в Германии",
+          "id": 2
+        },
+        {
+          "name":"Рекомендуем",
+          "id": 3
+        }
+      ],
       "items":[
-            {
-              "icon":"1",
-              "name":"news1",
-              "link":"link1"
-            },
-            {
-              "icon":"2",
-              "name":"news2",
-              "link":"link2"
-            },
-            {
-              "icon":"3",
-              "name":"news3",
-              "link":"link3"
-            },
-            {
-              "icon":"4",
-              "name":"news4",
-              "link":"link4"
-            },
-            {
-              "icon":"5",
-              "name":"news5",
-              "link":"link5"
-            }
-          ]
+        {
+          "icon":"fa-coffee",
+          "name":"Банк России видит риски ипотеки с ежемесячным платежом от 1 рубля",
+          "link":"link1",
+          "id": 1
+        },
+        {
+          "icon":"fa-hdd-o",
+          "name":"«Аэрофлот» завершил переход на отечественную систему бронирования",
+          "link":"link2",
+          "id": 2
+        },
+        {
+          "icon":"fa-suitcase",
+          "name":"NYT узнала о распоряжении Маска сократить часть сотрудников Twitter",
+          "link":"link3",
+          "id": 3
+        },
+        {
+          "icon":"fa-paperclip",
+          "name":"Минфин Германии призвал начать добычу газа методом фрекинга",
+          "link":"link4",
+          "id": 4
+        },
+        {
+          "icon":"fa-mobile-phone",
+          "name":"Twitter вернул рэперу Канье Уэсту доступ к аккаунту",
+          "link":"link5",
+          "id": 5
+        }
+      ]
     },
-    "assetPrices":{
+    "assets":{
       "items":[
-      {
-        "name":"USD MOEX",
-        "price":63.52,
-        "priceDelta":0.09
-      },
-      {
-        "asset":"EUR MOEX",
-        "price":70.86,
-        "priceDelta":0.14
-      },
-      {
-        "asset":"НЕФТЬ",
-        "price":64.90,
-        "priceDelta":1.63,
-        "priceDeltaUnit":'%'
-      },
-    ]},
+        {
+          "title":"USD MOEX",
+          "name":63.52,
+          "description":"+0.09",
+          "id": 1
+        },
+        {
+          "title":"EUR MOEX",
+          "name":70.86,
+          "description":"+0.14",
+          "id": 2
+        },
+        {
+          "title":"НЕФТЬ",
+          "name":64.90,
+          "description":"+1.63%",
+          "id": 3
+        }
+      ]
+    },
     "weather":{
-      "sections": [{"name": "Погода"}],
-      "items": [{"icon":"rain3","temperature":17,"unit": "°", details: [{name: "Утром", value: 17},{name: "днем", value: 20}]}]
-    },
-    "visited":{
-      "sections": [{"name": "Посещаемое"}],
-      "items": [
-        {"title":"Недвижимость","name":"о сталинках"},
-        {"title":"Маркет","name":"люстры и светильники"},
-        {"title":"Авто.ру","name":"привод 4х4 до 500 000"}]
+      "headings":[
+        {
+          "name":"Погода",
+          "id": 1
+        }
+      ],
+      "items":[
+        {
+          "icon":"fa-cloud",
+          "title":"+17°",
+          "id": 1,
+          "name":"Утром +17, днем +20"
+        }
+      ]
     },
     "map":{
-      "sections": [{"name": "Карта Германии"}],
-      "items": [
-        {"name":"Расписания"}],
+      "headings":[
+        {
+          "name":"Карта Германии",
+          "id": 1
+        }
+      ],
+      "items":[
+        {
+          "name":"Расписания",
+          "id": 1
+        }
+      ]
+    },
+    "visited":{
+      "headings":[
+        {
+          "name":"Посещаемое",
+          "id": 1
+        }
+      ],
+      "items":[
+        {
+          "title":"Недвижимость",
+          "name":"— о сталинках",
+          "id": 1
+        },
+        {
+          "title":"Маркет",
+          "name":"— люстры и светильники",
+          "id": 2
+        },
+        {
+          "title":"Авто.ру",
+          "name":"— привод 4х4 до 500 000",
+          "id": 3
+        }
+      ]
     },
     "tv":{
-      "sections": [{"name": "Телепрограмма", "isActive": true},{"name": "Эфир", "isButton": true}],
-      "items": [
-        {"time": "02:00","name":"ТНТ. Best", "description": "ТНТ International"},
-        {"time": "02:15","name":"Джинглики", "description": "Карусель INT"},
-        {"time": "02:25","name":"Наедине со всеми", "description": "Первый"}],
+      "headings":[
+        {
+          "name":"Телепрограмма",
+          "id": 1
+        },
+        {
+          "name":"Эфир",
+          "isButton":true,
+          "id": 2,
+          "icon":"fa-play"
+        }
+      ],
+      "items":[
+        {
+          "time":"02:00",
+          "name":"ТНТ. Best",
+          "description":"ТНТ International",
+          "id": 1
+        },
+        {
+          "time":"02:15",
+          "name":"Джинглики",
+          "description":"Карусель INT",
+          "id": 2
+        },
+        {
+          "time":"02:25",
+          "name":"Наедине со всеми",
+          "description":"Первый",
+          "id": 3
+        }
+      ]
     },
     "air":{
-      "sections": [{"name": "Телепрограмма", "isActive": true},{"name": "Эфир", "isButton": true}],
-      "items": [
-        {"icon": "play","name":"Управление как искусство", "description": "Успех"},
-        {"icon": "play","name":"Ночь", "description": "earthTV"},
-        {"icon": "play","name":"Андрей возн...", "description": "Совершенно секретно"},],
-    },    
+      "headings":[
+        {
+          "name":"Эфир",
+          "id": 1
+        }
+      ],
+      "items":[
+        {
+          "icon":"fa-play",
+          "name":"Управление как искусство",
+          "description":"Успех",
+          "id": 1
+        },
+        {
+          "icon":"fa-play",
+          "name":"Ночь",
+          "description":"earthTV",
+          "id": 2
+        },
+        {
+          "icon":"fa-play",
+          "name":"Андрей Возн...",
+          "description":"Совершенно секретно",
+          "id": 3
+        }
+      ]
+    }
   });
 };

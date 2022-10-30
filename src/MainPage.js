@@ -1,33 +1,29 @@
+// Главная страница
+
 import React from "react";
 
 import Ads from "./Components/Ads";
 import Logo from "./Components/Logo";
 import SearchBar from "./Components/SearchBar";
 import Banner from "./Components/Banner";
+import Container from "./Components/Container";
+import Blocks from "./Components/Blocks";
 
-import Blocks from "./Blocks/Blocks";
-import NewsBlock from "./Blocks/NewsBlock";
-import WeatherBlock from "./Blocks/WeatherBlock";
-import VisitedBlock from "./Blocks/VisitedBlock";
-import MapBlock from "./Blocks/MapBlock";
-import TvBlock from "./Blocks/TvBlock";
-import AirBlock from "./Blocks/AirBlock";
+import "./main.css";
 
-export default function MainPage() {
+export default function MainPage({data}) {
   return (
-    <>
-      <NewsBlock />
-      <Ads />
+    <Container type="page">
       <Logo />
-      <SearchBar />
-      <Banner />
-      <Blocks>
-        <WeatherBlock />
-        <VisitedBlock />
-        <MapBlock />
-        <TvBlock />
-        <AirBlock />
-      </Blocks>
-    </>
+      <Container type="info">
+        <Container type="header">
+          <Blocks type="actual" blocks={["news", "assets"]} data={data} />
+          <Ads />
+        </Container>
+        <SearchBar />
+        <Banner />
+        <Blocks type="footer" blocks={["weather", "visited", "map", "tv", "air"]} data={data} />
+      </Container>
+    </Container>
   );
 };
